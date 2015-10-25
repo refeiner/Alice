@@ -132,16 +132,25 @@
     <ClCompile Include="..\Classes\LuaEngine\LuaEngine.cpp">
       <Filter>Runtime\LuaEngine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\UI\Particle2DSystem.cpp">
-      <Filter>Runtime\UI</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Plugins\tlsf\tlsf.c">
       <Filter>Runtime\Plugins\tlsf</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Allocater\AliceObject.cpp">
       <Filter>Runtime\Allocater</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\UI\UIObject.cpp">
+    <ClCompile Include="..\Classes\UI\AliceUISlider.cpp">
+      <Filter>Runtime\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\AliceUIObject.cpp">
+      <Filter>Runtime\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\AliceUICSBObject.cpp">
+      <Filter>Runtime\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\AliceParticle2DSystem.cpp">
+      <Filter>Runtime\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\AliceUIButton.cpp">
       <Filter>Runtime\UI</Filter>
     </ClCompile>
   </ItemGroup>
@@ -230,9 +239,6 @@
     <ClInclude Include="..\Classes\LuaEngine\LuaEngine.h">
       <Filter>Runtime\LuaEngine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\UI\Particle2DSystem.h">
-      <Filter>Runtime\UI</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\LuaEngine\ExportModules.h">
       <Filter>Runtime\LuaEngine</Filter>
     </ClInclude>
@@ -245,7 +251,19 @@
     <ClInclude Include="..\Classes\Allocater\AliceObject.h">
       <Filter>Runtime\Allocater</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\UI\UIObject.h">
+    <ClInclude Include="..\Classes\UI\AliceUISlider.h">
+      <Filter>Runtime\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\AliceUIObject.h">
+      <Filter>Runtime\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\AliceUICSBObject.h">
+      <Filter>Runtime\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\AliceParticle2DSystem.h">
+      <Filter>Runtime\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\AliceUIButton.h">
       <Filter>Runtime\UI</Filter>
     </ClInclude>
   </ItemGroup>

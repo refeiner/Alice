@@ -71,7 +71,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\cocos\audio\include;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\external;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\external\chipmunk\include\chipmunk;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\extensions;..\Classes\Allocater;..\Classes\Plugins\tlsf;..\Classes;..\Classes\UI;..\Classes\LuaEngine;..\Classes\Plugins\Lua;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\cocos\audio\include;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\cocos;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\external;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\external\chipmunk\include\chipmunk;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\extensions;..\Classes\Allocater;..\Classes\Plugins\tlsf;..\Classes;..\Classes\UI;..\Classes\LuaEngine;..\Classes\Plugins\Lua;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -96,7 +96,7 @@
     </PostBuildEvent>
     <PreLinkEvent>
       <Command>
-</Command>
+      </Command>
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>
@@ -178,8 +178,11 @@ xcopy /Y /Q "$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\Classes\Plugins\Lua\lzio.c" />
     <ClCompile Include="..\Classes\Plugins\Lua\print.c" />
     <ClCompile Include="..\Classes\Plugins\tlsf\tlsf.c" />
-    <ClCompile Include="..\Classes\UI\Particle2DSystem.cpp" />
-    <ClCompile Include="..\Classes\UI\UIObject.cpp" />
+    <ClCompile Include="..\Classes\UI\AliceParticle2DSystem.cpp" />
+    <ClCompile Include="..\Classes\UI\AliceUIButton.cpp" />
+    <ClCompile Include="..\Classes\UI\AliceUICSBObject.cpp" />
+    <ClCompile Include="..\Classes\UI\AliceUIObject.cpp" />
+    <ClCompile Include="..\Classes\UI\AliceUISlider.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -214,8 +217,11 @@ xcopy /Y /Q "$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\Plugins\Lua\lzio.h" />
     <ClInclude Include="..\Classes\Plugins\tlsf\tlsf.h" />
     <ClInclude Include="..\Classes\Plugins\tlsf\tlsfbits.h" />
-    <ClInclude Include="..\Classes\UI\Particle2DSystem.h" />
-    <ClInclude Include="..\Classes\UI\UIObject.h" />
+    <ClInclude Include="..\Classes\UI\AliceParticle2DSystem.h" />
+    <ClInclude Include="..\Classes\UI\AliceUIButton.h" />
+    <ClInclude Include="..\Classes\UI\AliceUICSBObject.h" />
+    <ClInclude Include="..\Classes\UI\AliceUIObject.h" />
+    <ClInclude Include="..\Classes\UI\AliceUISlider.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
