@@ -1,2 +1,5 @@
-#include "Particle2DSystem.h"
-#include "UIObject.h"
+#include "AliceParticle2DSystem.h"
+#include "AliceUIObject.h"
+#include "AliceUISlider.h"
+#include "AliceUICSBObject.h"
+#include "AliceUIButton.h"

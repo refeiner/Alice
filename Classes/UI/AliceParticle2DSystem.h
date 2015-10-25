@@ -1,6 +1,6 @@
 #pragma once
 #include "lua.hpp"
-#include "UIObject.h"
+#include "AliceUIObject.h"
 
 namespace Alice
 {

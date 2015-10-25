@@ -1,4 +1,4 @@
-#include "Particle2DSystem.h"
+#include "AliceParticle2DSystem.h"
 
 int NewParticle2DSystemObject(lua_State*L)
 {

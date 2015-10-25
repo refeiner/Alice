@@ -4,7 +4,7 @@
 #include "cocos2d.h"
 USING_NS_CC;
 #include "LuaEngine.h"
-#include "UIObject.h"
+#include "AliceUIObject.h"
 cocos2d::Layer* g_Layer;
 
 using namespace cocostudio::timeline;
