@@ -31,7 +31,7 @@ int AliceParticle2DSystem_ChangeMode(lua_State*L)
 int AliceParticle2DSystem_SetGravity(lua_State*L)
 {
 	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
-	((ParticleSystemQuad*)ptr->node)->setGravity(ccp(lua_tonumber(L,2),lua_tonumber(L,3)));
+	((ParticleSystemQuad*)ptr->node)->setGravity(Vec2(lua_tonumber(L,2),lua_tonumber(L,3)));
 	return 0;
 }
 int AliceParticle2DSystem_SetSpeed(lua_State*L)
@@ -109,6 +109,172 @@ int AliceParticle2DSystem_SetRotatePerSecondVar(lua_State*L)
 	return 0;
 }
 
+//公共属性
+int AliceParticle2DSystem_SetStartSize(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setStartSize(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetStartSizeVar(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setStartSizeVar(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetEndSize(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setEndSize(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetEndSizeVar(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setEndSizeVar(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetStartColor(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setStartColor(Color4F(lua_tonumber(L,2), lua_tonumber(L, 3), lua_tonumber(L,4), lua_tonumber(L, 5)));
+	return 0;
+}
+int AliceParticle2DSystem_SetStartColorVar(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setStartColorVar(Color4F(lua_tonumber(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4), lua_tonumber(L, 5)));
+	return 0;
+}
+int AliceParticle2DSystem_SetEndColor(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setEndColor(Color4F(lua_tonumber(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4), lua_tonumber(L, 5)));
+	return 0;
+}
+int AliceParticle2DSystem_SetEndColorVar(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setEndColorVar(Color4F(lua_tonumber(L, 2), lua_tonumber(L, 3), lua_tonumber(L, 4), lua_tonumber(L, 5)));
+	return 0;
+}
+int AliceParticle2DSystem_SetStartSpin(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setStartSpin(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetStartSpinVar(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setStartSpinVar(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetEndSpin(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setEndSpin(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetEndSpinVar(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setEndSpinVar(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetLife(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setLife(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetLifeVar(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setLifeVar(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetAngle(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setAngle(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetAngleVar(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setAngleVar(lua_tonumber(L, 2));
+	return 0;
+}
+int AliceParticle2DSystem_SetPosition(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setPosition(Vec2(lua_tonumber(L, 2),lua_tonumber(L, 3)));
+	return 0;
+}
+int AliceParticle2DSystem_SetPositionVar(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setPosVar(Vec2(lua_tonumber(L, 2), lua_tonumber(L, 3)));
+	return 0;
+}
+int AliceParticle2DSystem_SetCenterOfGravity(lua_State*L)
+{
+	printf("no implemented method : AliceParticle2DSystem_SetCenterOfGravity\n");
+	return 0;
+}
+//继承自PaticleSystem的公有属性
+int AliceParticle2DSystem_SetEmissionRate(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setEmissionRate(lua_tonumber(L, 2));
+	return 0;
+}
+
+int AliceParticle2DSystem_SetDuration(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setDuration(lua_tonumber(L, 2));
+	return 0;
+}
+
+int AliceParticle2DSystem_SetBlendFunc(lua_State*L)
+{
+	GLenum Funcs[] = {
+		GL_ZERO,
+		GL_ONE,
+		GL_SRC_ALPHA,
+		GL_ONE_MINUS_SRC_ALPHA,
+		GL_SRC_COLOR,
+		GL_ONE_MINUS_SRC_COLOR,
+		GL_DST_ALPHA,
+		GL_ONE_MINUS_DST_ALPHA,
+		GL_DST_COLOR,
+		GL_ONE_MINUS_DST_COLOR,
+		GL_SRC_ALPHA_SATURATE
+	};
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setBlendFunc({ Funcs[lua_tointeger(L,2)],Funcs[lua_tointeger(L,3)] });
+	return 0;
+}
+
+int AliceParticle2DSystem_SetPositionType(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	((ParticleSystemQuad*)ptr->node)->setPositionType((ParticleSystem::PositionType)lua_tointeger(L, 2));
+	return 0;
+}
+
+int AliceParticle2DSystem_SetTexture(lua_State*L)
+{
+	Alice::Particle2DSystem * ptr = (Alice::Particle2DSystem*)lua_touserdata(L, 1);
+	std::string fileName = lua_tostring(L,2);
+	TextureCache * pTextureCache = Director::getInstance()->getTextureCache();
+	Texture2D* texture=pTextureCache->addImage(fileName);
+	((ParticleSystemQuad*)ptr->node)->setTexture(texture);
+	return 0;
+}
+
 namespace Alice
 {
 	Particle2DSystem::Particle2DSystem()
@@ -138,7 +304,31 @@ namespace Alice
 			{ "SetRotatePerSecond",AliceParticle2DSystem_SetRotatePerSecond },
 			{ "SetRotatePerSecondVar",AliceParticle2DSystem_SetRotatePerSecondVar },
 			//公用属性
-
+			{ "SetStartSize",AliceParticle2DSystem_SetStartSize },
+			{ "SetStartSizeVar",AliceParticle2DSystem_SetStartSizeVar },
+			{ "SetEndSize",AliceParticle2DSystem_SetEndSize },
+			{ "SetEndSizeVar",AliceParticle2DSystem_SetEndSizeVar },
+			{ "SetStartColor",AliceParticle2DSystem_SetStartColor },
+			{ "SetStartColorVar",AliceParticle2DSystem_SetStartColorVar },
+			{ "SetEndColor",AliceParticle2DSystem_SetEndColor },
+			{ "SetEndColorVar",AliceParticle2DSystem_SetEndColorVar },
+			{ "SetStartSpin",AliceParticle2DSystem_SetStartSpin },
+			{ "SetStartSpinVar",AliceParticle2DSystem_SetStartSpinVar },
+			{ "SetEndSpin",AliceParticle2DSystem_SetEndSpin },
+			{ "SetEndSpinVar",AliceParticle2DSystem_SetEndSpinVar },
+			{ "SetLife",AliceParticle2DSystem_SetLife },
+			{ "SetLifeVar",AliceParticle2DSystem_SetLifeVar },
+			{ "SetAngle",AliceParticle2DSystem_SetAngle },
+			{ "SetAngleVar",AliceParticle2DSystem_SetAngleVar },
+			{ "SetPosition",AliceParticle2DSystem_SetPosition },
+			{ "SetPositionVar",AliceParticle2DSystem_SetPositionVar },
+			{ "SetCenterOfGravity",AliceParticle2DSystem_SetCenterOfGravity },
+			//继承自ParticleSystem的公有属性
+			{ "SetEmissionRate",AliceParticle2DSystem_SetEmissionRate },
+			{ "SetDuration",AliceParticle2DSystem_SetDuration },
+			{ "SetBlendFunc",AliceParticle2DSystem_SetBlendFunc },
+			{ "SetPositionType",AliceParticle2DSystem_SetPositionType },
+			{ "SetTexture",AliceParticle2DSystem_SetTexture },
 			{ NULL,NULL }
 		};
 		luaL_newmetatable(L, "Particle2DSystemT");
