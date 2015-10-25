@@ -22,6 +22,12 @@
     <Filter Include="Runtime\LuaEngine">
       <UniqueIdentifier>{75a8dd9b-c595-46c4-a970-32d4178b7a6b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Runtime\UI">
+      <UniqueIdentifier>{db4512c4-0a6c-4319-975d-362f7c6dbf59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Runtime\Plugins\tlsf">
+      <UniqueIdentifier>{8f3a1310-2603-4ceb-85c1-d03c3a95a323}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -126,6 +132,12 @@
     <ClCompile Include="..\Classes\LuaEngine\LuaEngine.cpp">
       <Filter>Runtime\LuaEngine</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\UI\Particle2DSystem.cpp">
+      <Filter>Runtime\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\tlsf\tlsf.c">
+      <Filter>Runtime\Plugins\tlsf</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -211,6 +223,18 @@
     </ClInclude>
     <ClInclude Include="..\Classes\LuaEngine\LuaEngine.h">
       <Filter>Runtime\LuaEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\Particle2DSystem.h">
+      <Filter>Runtime\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaEngine\ExportModules.h">
+      <Filter>Runtime\LuaEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\tlsf\tlsf.h">
+      <Filter>Runtime\Plugins\tlsf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\tlsf\tlsfbits.h">
+      <Filter>Runtime\Plugins\tlsf</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

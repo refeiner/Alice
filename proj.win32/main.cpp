@@ -1,4 +1,5 @@
 #include "main.h"
+#include "Particle2DSystem.h"
 #include "AppDelegate.h"
 #include "cocos2d.h"
 #include "LuaEngine.h"
