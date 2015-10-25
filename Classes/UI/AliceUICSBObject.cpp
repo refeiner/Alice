@@ -14,11 +14,10 @@ int NewAliceUICSBObject(lua_State*L)
 	return 1;
 }
 
-int AliceUICSBObject_AddChild(lua_State*L)
+int AliceUICSBObject_Show(lua_State*L)
 {
 	Alice::UIObject * ptr = (Alice::UIObject*)lua_touserdata(L,1);
-	Alice::UIObject * child= (Alice::UIObject*)lua_touserdata(L, 2);
-	ptr->node->addChild(child->node);
+	ptr->node->setVisible(lua_toboolean(L,2)==0?false:true);
 	return 0;
 }
 
@@ -42,7 +41,7 @@ namespace Alice
 	int UICSBObject::Init(lua_State*L)
 	{
 		luaL_Reg api_m[] = {
-			{ "AddChild",AliceUICSBObject_AddChild },
+			{ "Show",AliceUICSBObject_Show },
 			{ "GetUISlider",AliceUICSBObject_GetUISlider },
 			{ NULL,NULL }
 		};

@@ -6,19 +6,10 @@ int NewAliceUIButton(lua_State*L)
 {
 	void*pMemory = lua_newuserdata(L, sizeof(Alice::UIButton));
 	Alice::UIButton * ptr = new(pMemory)Alice::UIButton;
-
 	luaL_getmetatable(L, "UIButtonT");
 	lua_setmetatable(L, -2);
 
 	return 1;
-}
-
-int AliceUIButton_AddChild(lua_State*L)
-{
-	Alice::UIObject * ptr = (Alice::UIObject*)lua_touserdata(L,1);
-	Alice::UIObject * child= (Alice::UIObject*)lua_touserdata(L, 2);
-	ptr->node->addChild(child->node);
-	return 0;
 }
 
 int AliceUIButton_SetOnButtonUpCallback(lua_State*L)
