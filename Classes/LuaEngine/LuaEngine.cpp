@@ -8,6 +8,7 @@ namespace Alice
 	{
 		s_GlobalStatePtr = luaL_newstate();
 		luaL_openlibs(s_GlobalStatePtr);
+		INIT_LUAMODULE(UIObject);
 		INIT_LUAMODULE(Particle2DSystem);
 	}
 }

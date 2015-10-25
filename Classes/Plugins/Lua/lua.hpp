@@ -9,6 +9,6 @@ extern "C" {
 }
 
 #define INIT_LUAMODULE(X) do \
-{	lua_pushcfunction(Alice::LuaEngine::s_GlobalStatePtr, Alice::##X::Init); \
+{	lua_pushcfunction(Alice::LuaEngine::s_GlobalStatePtr, Alice::##X::Init); lua_pushstring(Alice::LuaEngine::s_GlobalStatePtr,#X);\
 	if(lua_pcall(Alice::LuaEngine::s_GlobalStatePtr,1,0,0)!=0){printf("%s\n",lua_tostring(Alice::LuaEngine::s_GlobalStatePtr,-1));} \
 }while(0)

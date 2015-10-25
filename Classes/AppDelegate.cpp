@@ -2,7 +2,6 @@
 #include "HelloWorldScene.h"
 
 USING_NS_CC;
-
 AppDelegate::AppDelegate() {
 
 }
@@ -43,10 +42,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
 	
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+	auto scene = HelloWorld::createScene();
     // run
     director->runWithScene(scene);
-
     return true;
 }
 
