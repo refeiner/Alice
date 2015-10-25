@@ -3,7 +3,7 @@
 
 namespace Alice
 {
-	class Particle2DSystem
+	class UIObject
 	{
 	public:
 		static void Init(lua_State*L);

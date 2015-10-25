@@ -1,8 +1,8 @@
-#include "Particle2DSystem.h"
+#include "UIObject.h"
 
 namespace Alice
 {
-	void Particle2DSystem::Init(lua_State*L)
+	void UIObject::Init(lua_State*L)
 	{
 		printf("init particle\n");
 	}

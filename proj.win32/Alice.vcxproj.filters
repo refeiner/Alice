@@ -16,9 +16,6 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Runtime\ScriptInterface">
-      <UniqueIdentifier>{e155c115-bed8-4578-9db5-e4dfac2aa1f9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Runtime\LuaEngine">
       <UniqueIdentifier>{75a8dd9b-c595-46c4-a970-32d4178b7a6b}</UniqueIdentifier>
     </Filter>
@@ -27,6 +24,9 @@
     </Filter>
     <Filter Include="Runtime\Plugins\tlsf">
       <UniqueIdentifier>{8f3a1310-2603-4ceb-85c1-d03c3a95a323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Runtime\Allocater">
+      <UniqueIdentifier>{51ae95bd-adf3-466e-8735-402ec6f363ea}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +138,12 @@
     <ClCompile Include="..\Classes\Plugins\tlsf\tlsf.c">
       <Filter>Runtime\Plugins\tlsf</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Allocater\AliceObject.cpp">
+      <Filter>Runtime\Allocater</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UIObject.cpp">
+      <Filter>Runtime\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -235,6 +241,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Plugins\tlsf\tlsfbits.h">
       <Filter>Runtime\Plugins\tlsf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Allocater\AliceObject.h">
+      <Filter>Runtime\Allocater</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UIObject.h">
+      <Filter>Runtime\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -8,4 +8,7 @@ extern "C" {
 #include "lauxlib.h"
 }
 
-#define INIT_LUAMODULE(X) Alice::##X::Init(Alice::LuaEngine::s_GlobalStatePtr)
+#define INIT_LUAMODULE(X) do \
+{	lua_pushcfunction(Alice::LuaEngine::s_GlobalStatePtr, Alice::##X::Init); \
+	if(lua_pcall(Alice::LuaEngine::s_GlobalStatePtr,1,0,0)!=0){printf("%s\n",lua_tostring(Alice::LuaEngine::s_GlobalStatePtr,-1));} \
+}while(0)

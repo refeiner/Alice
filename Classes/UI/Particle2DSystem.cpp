@@ -2,8 +2,9 @@
 
 namespace Alice
 {
-	void Particle2DSystem::Init(lua_State*L)
+	int Particle2DSystem::Init(lua_State*L)
 	{
 		printf("init particle\n");
+		return 0;
 	}
 }
