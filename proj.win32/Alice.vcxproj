@@ -71,7 +71,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\cocos\audio\include;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\external;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\external\chipmunk\include\chipmunk;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\extensions;..\Classes;..;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\cocos\audio\include;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\external;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\external\chipmunk\include\chipmunk;$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\extensions;..\Classes;..\Classes\LuaEngine;..\Classes\Plugins\Lua;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -86,7 +86,7 @@
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
@@ -146,11 +146,67 @@ xcopy /Y /Q "$(COCOS_FRAMEWORKS)\cocos2d-x-3.7.1\prebuilt\win32\*.*" "$(OutDir)"
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\LuaEngine\LuaEngine.cpp" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lapi.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lauxlib.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lbaselib.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lcode.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\ldblib.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\ldebug.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\ldo.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\ldump.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lfunc.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lgc.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\linit.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\liolib.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\llex.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lmathlib.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lmem.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\loadlib.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lobject.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lopcodes.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\loslib.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lparser.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lstate.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lstring.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lstrlib.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\ltable.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\ltablib.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\ltm.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lundump.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lvm.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\lzio.c" />
+    <ClCompile Include="..\Classes\Plugins\Lua\print.c" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\LuaEngine\LuaEngine.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lapi.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lauxlib.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lcode.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\ldebug.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\ldo.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lfunc.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lgc.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\llex.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\llimits.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lmem.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lobject.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lopcodes.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lparser.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lstate.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lstring.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\ltable.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\ltm.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lua.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lua.hpp" />
+    <ClInclude Include="..\Classes\Plugins\Lua\luaconf.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lualib.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lundump.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lvm.h" />
+    <ClInclude Include="..\Classes\Plugins\Lua\lzio.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

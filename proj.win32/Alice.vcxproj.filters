@@ -1,36 +1,216 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="win32">
-      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
-    </Filter>
     <Filter Include="resource">
       <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src">
+    <Filter Include="Runtime">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Runtime\Plugins">
+      <UniqueIdentifier>{879ab2e1-fd1d-4911-9ba0-9db78d8c334a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Runtime\Plugins\Lua">
+      <UniqueIdentifier>{508c8bd1-f32b-4ade-85ff-b5021294a97f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Runtime\ScriptInterface">
+      <UniqueIdentifier>{e155c115-bed8-4578-9db5-e4dfac2aa1f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Runtime\LuaEngine">
+      <UniqueIdentifier>{75a8dd9b-c595-46c4-a970-32d4178b7a6b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>win32</Filter>
+      <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>src</Filter>
+      <Filter>Runtime</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
+      <Filter>Runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lauxlib.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lbaselib.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lcode.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\ldblib.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\ldebug.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\ldo.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\ldump.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lfunc.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lgc.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\linit.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\liolib.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\llex.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lmathlib.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lmem.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\loadlib.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lobject.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lopcodes.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\loslib.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lparser.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lstate.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lstring.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lstrlib.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\ltable.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\ltablib.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\ltm.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lundump.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lvm.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lzio.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\print.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Plugins\Lua\lapi.c">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\LuaEngine\LuaEngine.cpp">
+      <Filter>Runtime\LuaEngine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
-      <Filter>win32</Filter>
+      <Filter>Platform</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
+      <Filter>Runtime</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
+      <Filter>Runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lauxlib.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lcode.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\ldebug.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\ldo.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lfunc.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lgc.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\llex.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\llimits.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lmem.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lobject.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lopcodes.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lparser.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lstate.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lstring.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\ltable.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\ltm.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lua.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lua.hpp">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\luaconf.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lualib.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lundump.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lvm.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lzio.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Plugins\Lua\lapi.h">
+      <Filter>Runtime\Plugins\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaEngine\LuaEngine.h">
+      <Filter>Runtime\LuaEngine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
