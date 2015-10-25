@@ -6,7 +6,7 @@ namespace Alice
 	class LuaEngine
 	{
 	public:
-		static lua_State*	s_GobalStatePtr;
+		static lua_State*	s_GlobalStatePtr;
 		static void Init();
 	};
 }

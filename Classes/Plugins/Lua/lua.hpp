@@ -7,3 +7,5 @@ extern "C" {
 #include "lualib.h"
 #include "lauxlib.h"
 }
+
+#define INIT_LUAMODULE(X) Alice::##X::Init(Alice::LuaEngine::s_GlobalStatePtr)

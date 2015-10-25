@@ -1,7 +1,7 @@
 #include "HelloWorldScene.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
-
+#include "cocos2d.h"
 USING_NS_CC;
 
 using namespace cocostudio::timeline;
@@ -30,7 +30,10 @@ bool HelloWorld::init()
     {
         return false;
     }
-    
+	ParticleSystemQuad* m_emitter = new ParticleSystemQuad();
+	m_emitter = ParticleGalaxy::create();
+	addChild(m_emitter);
+
     //auto rootNode = CSLoader::createNode("MainScene.csb");
 	//
     //addChild(rootNode);
